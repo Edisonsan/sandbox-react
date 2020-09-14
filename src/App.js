@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { nullish } from './code/nullish';
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <p>{nullish().providerCountry}</p>
+      <p>{nullish().nullish}</p>
+      <p>{nullish().providerAddress}</p>
+      <p>{nullish().providerOrders}</p>
+      <p>{nullish().providerNotDefined}</p>
     </div>
   );
-}
+};
 
 export default App;
